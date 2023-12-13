@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#265073">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#111215"
+        android:orientation="vertical"
+        >
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            >
+            <TableRow>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Conexión Bluetooth"
+                    android:textColor="@color/azuln"
+                    android:gravity="center"
+                    android:textSize="25dp"
+                    android:layout_margin="20dp"
+                    android:textStyle="bold"
+
+                    android:padding="5dp"
+
+                    />
+            </TableRow>
+
+            <TableRow
+                android:background="@color/grisn"
+                android:padding="8dp">
+                <ImageButton
+                    android:id="@+id/btbuscar"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:background="@drawable/search"
+                    android:contentDescription="Botón de Buscar"/>
+                <Spinner
+                    android:id="@+id/dispos_encontrados"
+                    android:layout_width="0dp"
+                    android:layout_weight="2.5"
+                    android:layout_height="50dp"
+                    android:popupBackground="@color/grisn"
+
+                    android:backgroundTint="@color/white"
+                    />
+                <ImageButton
+                    android:id="@+id/btconectar"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bluetooth"
+
+                    android:contentDescription="Botón de conectar"/>
+                <ImageButton
+                    android:id="@+id/btdesconectar"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bluetooth_d"
+                    android:contentDescription="Botón de desactivar"/>
+
+
+
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="NeoPixel Lamp"
+                    android:textColor="@color/rojon"
+                    android:gravity="center"
+                    android:textSize="40dp"
+                    android:layout_margin="20dp"
+                    android:textStyle="bold"
+
+                    android:padding="5dp"
+
+                    />
+            </TableRow>
+
+
+            <TableRow >
+                <View
+                    android:id="@+id/colorViewg"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.3"
+                    android:layout_height="270dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="#393E46"
+                    />
+
+                <ImageView
+                    android:id="@+id/rueda_color"
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    android:layout_height="270dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/color"
+
+                    />
+                <View
+                    android:id="@+id/colorViewg2"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.3"
+                    android:layout_height="270dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="#393E46"
+                    />
+
+
+            </TableRow>
+
+            <TableRow>
+                <View
+                    android:id="@+id/colorViewg3"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:layout_height="6dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    />
+            </TableRow>
+
+
+
+            <TableRow>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:text="HEX:"
+                    android:textSize="20dp"
+                    android:textColor="#eaeaea"
+                    android:layout_height="35dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="#393E46"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical|start"
+                    android:padding="5dp"/>
+                <TextView
+                    android:id="@+id/txt_color_seleccionado"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.7"
+                    android:layout_height="35dp"
+                    android:background="@color/blanco"
+                    android:layout_marginVertical="10dp"
+                    android:text="#EAEAEA"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+
+                    android:gravity="center_vertical|start"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:text="RGB:"
+                    android:textSize="20dp"
+                    android:textColor="#eaeaea"
+                    android:layout_height="35dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="#393E46"
+                    android:gravity="center_vertical|start"
+                    android:layout_gravity="center_vertical"
+                    android:padding="5dp"/>
+                <TextView
+                    android:id="@+id/txt_color_seleccionado2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="35dp"
+                    android:background="@color/blanco"
+                    android:layout_marginVertical="10dp"
+                    android:text=" (140,140,140)"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical|start"/>
+
+            </TableRow>
+
+            <TableRow>
+
+            </TableRow>
+
+            <TableRow>
+
+                <SeekBar
+                    android:id="@+id/seekbar"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="5"
+                    android:max="255"
+                    android:progress="50"
+                    android:progressBackgroundTint="#EAEAEA"
+                    android:progressTint="@color/azuln"
+                    android:scaleX="1"
+                    android:scaleY="2"
+                    android:thumb="@drawable/thumb_circle"
+                    android:thumbTint="@color/azuln"
+                    android:layout_margin="10dp"/>
+
+                <TextView
+                    android:id="@+id/lvlintensity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/blanco"
+                    android:text="50"
+                    android:layout_marginHorizontal="10dp"
+                    android:textSize="23dp"
+                    android:layout_gravity="center"
+
+                    android:gravity="center_vertical|start"/>
+            </TableRow>
+            <TableRow>
+                <Button
+                    android:id="@+id/btefecto"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.2"
+                    android:layout_height="wrap_content"
+                    android:text="Efecto"
+                    android:textSize="21sp"
+                    android:textColor="#EAEAEA"
+                    android:backgroundTint="#95389E"
+                    android:layout_margin="10dp"
+                    />
+                <Spinner
+                    android:id="@+id/spiner_efectos"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="50dp"
+                    android:popupBackground="@color/grisn"
+                    android:layout_margin="10dp"
+                    android:background="#7E7C7C"
+                    />
+
+            </TableRow>
+            <TableRow>
+                <Button
+                    android:id="@+id/btiniciar"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Iniciar"
+                    android:textSize="21sp"
+                    android:textColor="#EAEAEA"
+                    android:backgroundTint="#0F4C75"
+                    android:layout_margin="10dp"
+
+                    />
+                <Button
+                    android:id="@+id/btapagar"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Apagar"
+                    android:textSize="21sp"
+                    android:textColor="#EAEAEA"
+                    android:backgroundTint="@color/rojon"
+                    android:layout_margin="10dp"
+
+                    />
+            </TableRow>
+            <TableRow
+              >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Ambient Lamp"
+                android:textColor="@color/verde"
+                android:gravity="center"
+                android:textSize="40dp"
+                android:layout_marginTop="30dp"
+                android:textStyle="bold"
+                android:background="@color/grisn"
+                android:padding="5dp"
+
+                />
+
+            </TableRow>
+            <TableRow
+                >
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipOnOff"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:text="off"
+                    app:chipIcon="@drawable/ic_power_off"
+                    android:checked="false"
+                    android:clickable="true"
+                    android:checkable="true"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Temperatura en tiempo real"
+                    android:textColor="@color/blanco"
+                    android:gravity="right"
+                    android:textSize="20dp"
+                    android:layout_margin="20dp"
+                    android:textStyle="italic"
+
+
+                    />
+
+            </TableRow>
+            <TableRow
+                android:layout_margin="10dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight=".2"
+                    android:layout_height="wrap_content"
+                    android:text="H:"
+                    android:textColor="#FF2E63"
+                    android:textSize="30dp"/>
+
+                <TextView
+                    android:id="@+id/hum"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="hum"
+                    android:textColor="#EAEAEA"
+                    android:background="#61605F"
+                    android:textSize="30dp"
+                    />
+
+            </TableRow>
+            <TableRow
+                android:layout_margin="10dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight=".2"
+                    android:layout_height="wrap_content"
+                    android:text="Tc:"
+                    android:textColor="#FF2E63"
+                    android:textSize="30dp"/>
+
+                <TextView
+                    android:id="@+id/tempc"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="tempc"
+                    android:textColor="#EAEAEA"
+                    android:background="#61605F"
+                    android:textSize="30dp"
+                    />
+
+            </TableRow>
+            <TableRow>
+                <Button
+                    android:id="@+id/btiniciar2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Iniciar"
+                    android:textSize="21sp"
+                    android:textColor="#EAEAEA"
+                    android:backgroundTint="#0F4C75"
+                    android:layout_margin="10dp"
+
+                    />
+                <Button
+                    android:id="@+id/btapagar2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Apagar"
+                    android:textSize="21sp"
+                    android:textColor="#EAEAEA"
+                    android:backgroundTint="@color/rojon"
+                    android:layout_margin="10dp"
+
+                    />
+            </TableRow>
+            <TableRow
+                >
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+app:singleSelection="true"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:text="choice"/>
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:text="choice"/>
+                </com.google.android.material.chip.ChipGroup>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Simulación en tiempo real"
+                    android:textColor="@color/blanco"
+                    android:gravity="right"
+                    android:textSize="20dp"
+                    android:layout_margin="20dp"
+                    android:textStyle="italic"
+                    />
+
+
+
+            </TableRow>
+            <TableRow>
+
+                <SeekBar
+                    android:id="@+id/seekbartemp1"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="5"
+                    android:max="255"
+                    android:progress="50"
+                    android:progressBackgroundTint="#EAEAEA"
+                    android:progressTint="@color/azuln"
+                    android:scaleX="1"
+                    android:scaleY="2"
+                    android:thumb="@drawable/thumb_circle"
+                    android:thumbTint="@color/azuln"
+                    android:layout_margin="10dp"/>
+
+                <TextView
+                    android:id="@+id/lvtemp1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/blanco"
+                    android:text="50"
+                    android:layout_marginHorizontal="10dp"
+                    android:textSize="23dp"
+                    android:layout_gravity="center"
+
+                    android:gravity="center_vertical|start"/>
+            </TableRow>
+            <TableRow
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Pronóstico del clima"
+                    android:textColor="#FF9800"
+                    android:gravity="center"
+                    android:textSize="40dp"
+                    android:layout_marginTop="30dp"
+                    android:textStyle="bold"
+                    android:background="@color/grisn"
+                    android:padding="5dp"
+
+                    />
+
+            </TableRow>
+            <TableRow
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Pronóstico en tiempo real"
+                    android:textColor="@color/blanco"
+                    android:gravity="right"
+                    android:textSize="20dp"
+                    android:layout_margin="20dp"
+                    android:textStyle="italic"
+
+
+                    />
+
+            </TableRow>
+            <TableRow
+                android:layout_margin="10dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight=".2"
+                    android:layout_height="wrap_content"
+                    android:text="P:"
+                    android:textColor="#FF2E63"
+                    android:textSize="30dp"/>
+
+                <TextView
+                    android:id="@+id/pronostico"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Pronóstico"
+                    android:textColor="#EAEAEA"
+                    android:background="#61605F"
+                    android:textSize="30dp"
+                    />
+
+            </TableRow>
+            <TableRow
+                android:layout_margin="10dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight=".2"
+                    android:layout_height="wrap_content"
+                    android:text="Tc:"
+                    android:textColor="#FF2E63"
+                    android:textSize="30dp"/>
+
+                <TextView
+                    android:id="@+id/tempf"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="tempF"
+                    android:textColor="#EAEAEA"
+                    android:background="#61605F"
+                    android:textSize="30dp"
+                    />
+
+            </TableRow>
+            <TableRow
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Simulación de Pronóstico"
+                    android:textColor="@color/blanco"
+                    android:gravity="right"
+                    android:textSize="20dp"
+                    android:layout_margin="20dp"
+                    android:textStyle="italic"
+
+
+                    />
+
+            </TableRow>
+            <TableRow>
+                <Button
+                    android:id="@+id/btpronostico"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.2"
+                    android:layout_height="wrap_content"
+                    android:text="Pronostico"
+                    android:textSize="21sp"
+                    android:textColor="#EAEAEA"
+                    android:backgroundTint="#95389E"
+                    android:layout_margin="10dp"
+                    />
+                <Spinner
+                    android:id="@+id/spiner_pronosticos"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="50dp"
+                    android:popupBackground="#7AC7DA"
+                    android:layout_margin="10dp"
+                    android:background="#7E7C7C"
+                    />
+
+            </TableRow>
+            <TableRow>
+
+                <SeekBar
+                    android:id="@+id/seekbartemp2"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="5"
+                    android:max="255"
+                    android:progress="50"
+                    android:progressBackgroundTint="#EAEAEA"
+                    android:progressTint="@color/azuln"
+                    android:scaleX="1"
+                    android:scaleY="2"
+                    android:thumb="@drawable/thumb_circle"
+                    android:thumbTint="@color/azuln"
+                    android:layout_margin="10dp"/>
+
+                <TextView
+                    android:id="@+id/lvtemp2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/blanco"
+                    android:text="50"
+                    android:layout_marginHorizontal="10dp"
+                    android:textSize="23dp"
+                    android:layout_gravity="center"
+
+                    android:gravity="center_vertical|start"/>
+            </TableRow>
+
+
+        </TableLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>
+
+
+
+
+
